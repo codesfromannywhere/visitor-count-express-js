@@ -10,10 +10,10 @@ const PORT = process.env.PORT || 3006;
 app.use(express.json());
 
 
-// ========= REQUESTS  =========
+
+// ========= REQUEST VISIT +1  =========
 
 app.get("/visit", async (req, res) => {
-    // const visits = await Visit.count()
     const saveVisitor = async (id) => {
         let visitors = await Visit.findOne({ id });
         if (visitors == null) {
@@ -21,23 +21,29 @@ app.get("/visit", async (req, res) => {
                 count: 1
             });
             startCount.save();
-            res.send(`<h2>Counter: ` + 1 + '</h2>')
+            res.send(`<h2>Visits: ` + 1 + '</h2>')
 
         } else {
             visitors.count++;
             visitors.save();
-            res.send(`<h2>Counter: ` + visitors.count + '</h2>')
+            res.send(`<h2>Vistis: ` + visitors.count + '</h2>')
 
         }
     };
-
     saveVisitor();
     // res.send({ message: "Yeah, ein neuer Besuch!" });
 });
 
-// app.get("/visited", async (req, res) => {
-//     res.send({ message: "Yeah, alle Besuche!" });
-// });
+
+
+// ========= REQUEST ALL VISITS =========
+
+app.get("/visited", async (req, res) => {
+    const visits = await Visit.find()
+    res.send(visits);
+});
+
+
 
 
 app.listen(PORT, () => {
