@@ -1,0 +1,38 @@
+.App {
+    margin-top: 10%;
+
+    h1,
+    .counterbar {
+        text-align: center;
+    }
+
+    h1 {
+        color: #334195;
+    }
+
+    .counterbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 1.2rem 1rem;
+        width: 20%;
+        background-color: white;
+        border-radius: 5rem;
+
+        img {
+            padding-right: 1rem;
+        }
+
+        p {
+            font-size: 1.7rem;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+
+    }
+
+}

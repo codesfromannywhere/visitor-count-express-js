@@ -20,14 +20,15 @@ app.get("/visit", async (req, res) => {
             const startCount = new Visit({
                 count: 1
             });
-            // startCount.save();
+            startCount.save();
             // res.send(`<h2>Visits: ` + 1 + '</h2>')
-            res.send(visitors)
+            // res.send(visitors)
 
         } else {
             visitors.count++;
-            res.send(`<h2>Vistis: ` + visitors.count + '</h2>')
+            res.send(`${visitors.count}`)
             visitors.save();
+
         }
     };
     saveVisitor();
