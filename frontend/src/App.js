@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>I COUNT ON YOU</h1>
+      <h1>eye count on you</h1>
       <div className='counterbar'>
         <div className='eyeGif'>        <img src={eyeGif} alt="eye-gif" />
         </div>
