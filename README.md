@@ -1,4 +1,5 @@
 # visitor-count-express-js
 
 
-<img width="1440" alt="Bildschirm­foto 2023-06-12 um 17 46 42" src="https://github.com/codesfromannywhere/visitor-count-express-js/assets/123948041/3871c984-e09d-4faa-b287-062a7257a713">
+
+<img width="1438" alt="Bildschirm­foto 2023-06-13 um 09 09 09" src="https://github.com/codesfromannywhere/visitor-count-express-js/assets/123948041/ceca5336-6a08-4ac8-a03c-216284a3e19f">
