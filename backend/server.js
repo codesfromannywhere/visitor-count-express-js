@@ -50,3 +50,55 @@ app.get("/visited", async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server läuft hier: ${PORT}`);
 });
+
+
+
+
+// import express from "express";
+// import fs from "fs-jetpack";
+// import cors from "cors";
+
+// const PORT = process.env.PORT || 3006;
+// const app = express();
+
+// // Erstelle Absolute URL
+// let { pathname } = new URL("./count.json", import.meta.url);
+// // Stelle sicher das die Datei existiert
+// // wenn nicht erstelle sie (leer)
+// fs.file(pathname);
+// // Aktueller zählerstand potentiel leerer string
+// let counter = fs.read(pathname, "json");
+
+// app.use(cors());
+
+// app.get("/visit", (req, res) => {
+//     console.log(req.query);
+//     const { site } = req.query;
+
+//     if (!site) {
+//         res
+//             .status(401)
+//             .send({ error: "Use ?site query to specify site you want to track." });
+//     }
+
+//     if (!counter[site]) {
+//         counter[site] = 0;
+//     }
+
+//     counter[site] += 1;
+//     res.send();
+//     fs.write(pathname, counter);
+// });
+
+// app.get("/visited", (req, res) => {
+//     const { site } = req.query;
+//     if (!site) {
+//         return res.send(counter);
+//     }
+
+//     res.send(`${counter[site]}`);
+// });
+
+// app.listen(PORT, () => {
+//     console.log("YO ", PORT);
+// });
